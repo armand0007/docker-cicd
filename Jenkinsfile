@@ -1,4 +1,4 @@
-sh '''node{
+node{
 stage (‘scm checkout’) {
 git (‘https://github.com/armand0007/docker-cicd.git\')
 }
@@ -12,4 +12,4 @@ sh label: ‘’, script: ‘mvn clean package ‘
 stage (‘docker image build’) {
 sh ‘docker build -t pkw0301/prakash-app:1.0.0 .’
 }
-}'''
+}
